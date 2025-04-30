@@ -4,7 +4,7 @@
 }
 body{
 font-family: "Inconsolata", monospace;
-background-image: url('/images/background-desktop.png');
+background-image: url('./images/background-desktop.png');
 background-repeat: no-repeat;
 background-position: center ;
 min-height: 100vh;
@@ -228,7 +228,7 @@ form button:hover,.back:hover{
 }
 .ticket{
     display: none;
-    background-image: url(./images/pattern-ticket.svg);
+    background-image: url('./images/pattern-ticket.svg');
     background-repeat: no-repeat;
     width: 100%;
     min-height: 280px;
