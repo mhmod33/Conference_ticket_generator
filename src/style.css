@@ -4,7 +4,7 @@
 }
 body{
 font-family: "Inconsolata", monospace;
-background-image: url('./images/background-desktop.png');
+background-image: url('/Conference_ticket_generator/images/pattern-ticket.svg');
 background-repeat: no-repeat;
 background-position: center ;
 min-height: 100vh;
