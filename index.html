@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference ticket generator </title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="/src/all.min.css">
+    <link rel="stylesheet" href="./src/bootstrap.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+
+    <div class="circle_image"></div>    
+    <div class="lines_image"></div>
+    <div class="pattern_squiggly_bottom"></div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////
+// ********************ALl the design div***************************************************
+////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="container d-flex align-items-center justify-content-center flex-column">
+        
+        <div class="row logo-cont mt-5 w-s-25"><img src="/images/logo-full.svg" alt=""></div>
+        
+        <header class="mt-5 head1">
+            <h1 class="mb-3">Your Journey to coding conf <br> <span class="currentYear"></span> starts here</h1>
+            <h5 class="subhead1">Secure your spot at next year's biggest coding conference</h5>
+        </header>
+
+
+<!-- // ********************header title*************************************************** -->
+
+        <header class="mt-5 head2">
+            <h1 class="mb-3">Congrats, <span class="name_hided"> Mahmoud!</span><br>Your ticket is ready.</h1>
+            <h5 class="subhead2">We've emailed your ticket to <span class="mail_hided">me653830@g</span><br> and will send updates in the run up to the event</h5>
+        </header>
+
+
+
+<!-- // ********************Main div*************************************************** -->
+
+        <div class=" d-flex from_div d-flex flex-column mt-lg-5 mt-xs-1  mb-5 ">
+
+            <div class="divToHide">     
+            <label for="upload_Image_container" class="form-label">Upload Avatar</label>
+ 
+             <div class="upload_Image_container" id="upload_Image_container">
+          
+                 <label for="input_file" id="btn_upload_first" class="mb-1">
+                     <div class="image_Upload ">
+                         <img src="./images/icon-upload.svg" alt="" id="upload_icon_image">
+                     </div>
+     
+                     <div class="buttons_d_ch mb-3 ">
+                         <button id="btn_delete_image">Remove image</button>
+                         <label for="input_file" id="btn_upload_second" onchange="changeImageFunc()">Change Image</label>
+                     </div>
+                     <p class="drag_title">Drag and drop or click to upload</p>
+                     
+                 </label>
+                 <input type="file" accept="image/jpeg , image/png , image/jpg" id="input_file" onchange="changeImageFunc()">
+             </div> 
+             <div id="avatar_valdiate" class="form-text mb-3">🛈 Upload your photo (JPG or PNG,max size: 5mb).</div> 
+ 
+ 
+             
+         <form class="w-100" onsubmit="return validateForm(event); viewticket() ">
+ 
+ 
+              <div class="mb-3">
+               <label for="fullname" class="form-label">Full name</label>
+               <input type="text" class="form-control" id="fullname" >
+               <div id="name_valdiate" class="form-text ">🛈 Enter your name.</div>
+             </div> 
+ 
+ 
+             <div class="mb-3">
+                 <label for="email" class="form-label">Email Address</label>
+                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                 <div id="mail_valdiate" class="form-text ">🛈 Enter your email.</div>
+             </div> 
+ 
+ 
+              <div class="mb-3">
+                 <label for="username" class="form-label">Github username</label>
+                 <input type="username" class="form-control" id="username">
+                 <div id="username_valdiate" class="form-text"> 🛈 Enter your username.</div>
+             </div> 
+             
+             <button type="submit" class="btn w-100 mt-xs-5" id="generate_btn">Generate My Ticket</button>
+           </form>
+         
+            </div>
+
+
+            
+
+        </div>
+
+
+<!-- // ********************ticket div*************************************************** -->
+
+        <div class="ticket_div d-flex flex-column mt-5  justify-content-center align-items-center">
+    
+            <div class="ticket position-relative">
+                
+                <div class="row logo-cont  mt-4 w-50 d-flex gap-5">
+                    
+                    <img src="/images/logo-full.svg" class="ms-4" alt=""></div>
+                    <h5 class="date_address">Apr 27, 2025 / Cairo, Egypt</h5>
+                    
+                    <div class="code">#01609</div>
+                    
+                    <div class="profile ms-4 d-flex flex-row position-absolute  ms-4 gap-3 mt-lg-5 mt-xs-1">
+                        
+                        <div class="ticket_profile ">
+                            <img src="./images/icon-upload.svg " class="ticket_profile_image" alt="" id="">
+                        </div>
+                        
+                        <div class="personal_info d-flex flex-column align gap-0">
+                            <h3 class="nameOnTicket">@Person name</h3>
+                            <h5><span class="github_icon"><i class="fa-brands fa-square-github mt-0"></i> </span> <span class="usernameOnTicket">@username</span></h5>
+                        </div>
+                        
+                    </div>
+            </div>
+            <button class="btnback btn" onclick="backToForm()">&larr; Back</button>
+    
+        </div>
+
+    </div>    
+    
+</div> 
+<script src="./js.js"></script>
+<script src="/src/all.min.js"></script>
+<script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

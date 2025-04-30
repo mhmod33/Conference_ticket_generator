@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+*{
+    font-family: "Inconsolata", monospace;
+}
+body{
+font-family: "Inconsolata", monospace;
+background-image: url('/images/background-desktop.png');
+background-repeat: no-repeat;
+background-position: center ;
+min-height: 100vh;
+}
+
+/* ------colors------ */
+:root{
+    --white:Neutral 0: hsl(0, 0%, 100%);
+    --Neutral300:hsl(252, 6%, 83%);
+    --Neutral500: hsl(245, 15%, 58%);
+    --Neutral700: hsl(245, 19%, 35%);
+    --Neutral900: hsl(248, 70%, 10%);
+    --Orange500: hsl(7, 88%, 67%);
+    --Orange700: hsl(7, 71%, 60%);
+}
+header{
+    color: #fff !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+header h1{
+    font-size: 3rem !important;
+    font-family: "Inconsolata", monospace !important;
+    font-weight: 900 !important;
+}
+header h5{
+    font-size: 1.25rem !important;
+    color:  hsl(245, 15%, 58%);
+}
+.name_hided , .mail_hided,.currentYear{
+    background:linear-gradient(to right, hsl(7, 86%, 67%) , hsl(0, 0%, 100%)) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.head2{
+    display: none;
+}
+.subhead2{
+    display: none;
+}
+
+.container{
+    margin-top: 0;
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+/* *************Images in background****************** */
+.main-wrapper {
+    position: relative;
+    min-height: 100vh;
+}
+.lines_image{
+    background-image: url('/images/pattern-lines.svg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: absolute;
+}
+.circle_image{
+    background-image: url('/images/pattern-circle.svg');
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    height: 250px;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pattern_squiggly_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-image: url('/images/pattern-squiggly-line-bottom-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.pattern_squiggly_bottom img{
+    margin-top: 80%;
+    position: absolute;
+}
+
+/* *************From****************** */
+
+.image_Upload{
+    
+    background-color: hsla(245, 19%, 35%, 0.5);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--Neutral300);
+    cursor: pointer;
+
+}
+#btn_upload{
+    background-color: var(--Neutral700);
+    color: white;
+    height: 35px;
+}
+#upload_icon_image{
+    width: 35px;
+    height: 100%;
+    border-radius: 8px;
+}
+#btn_upload_first{
+    cursor: pointer;
+    background-color: hsl(245, 19%, 35%,0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    border: 2px dashed var(--Neutral500);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 15px;
+}
+#avatar_valdiate{
+    color: #ffffff48;
+}
+#btn_delete_image{
+    background-color: hsl(245, 25%, 31%,0.5);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: var(--Neutral300);
+    display:none;
+    transition: 0.4s;
+    margin-top: 15px;
+
+}
+#btn_delete_image:hover{
+    background-color: rgba(175, 13, 13, 0.774);
+}
+#btn_upload_second{
+    background-color: hsl(245, 25%, 31%,0.5);
+    border-radius: 5px;
+    width: 108px;
+    height: 26px;
+    color: var(--Neutral300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    display:none;
+    margin-top: 15px;
+}
+#input_file{
+    display: none;
+}
+.buttons_d_ch{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.divToHide{
+    margin-top: 20px;
+    display: block;
+}
+.from_div{
+    color: #fff;
+    min-width: 600px;
+}
+#username_valdiate,#mail_valdiate,#name_valdiate{
+    font-weight: 500 !important;
+    font-family: "Inconsolata", monospace !important;
+    display: none;
+    color: #ffffff48;
+
+}
+form button,.back{
+    background-color: var(--Orange700) !important;
+    color:var(--Neutral900) !important;
+    font-family: "Inconsolata", monospace !important;
+    font-weight: 900 !important;
+    transition: 5s;
+}
+
+form button:hover,.back:hover{
+    filter: drop-shadow(3px 2px 0px #f5a0a0);
+    transition: 0.3s;
+
+}
+.from_div input{
+    height: 50px;
+    background-color: hsl(245, 19%, 35%,0.1);
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--Neutral300);
+    color:hsl(252, 6%, 83%);
+}
+.from_div input:focus{
+    background-color: var(--Neutral900);
+    color: var(--Neutral300);
+}
+.btnback{
+    background-color: var(--Orange700) !important;
+    color:var(--Neutral900) !important;
+    font-family: "Inconsolata", monospace !important;
+    font-weight: 900 !important;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    width: 50%;
+}
+
+/* *************Ticket****************** */
+
+.ticket_div{
+    min-width: 600px;
+
+    
+}
+.ticket{
+    display: none;
+    background-image: url(/images/pattern-ticket.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 280px;
+    background-size: contain;
+}
+.ticket_profile_image{
+    width:60px;
+    height: 100%;
+    border-radius: 8px;
+    background-color: hsla(245, 19%, 35%, 0.5);
+    border-radius: 8px;
+    border: 2px solid var(--Orange700);
+}
+.ticket_profile{
+    height: 60px;
+
+}
+.profile{
+    bottom: 15PX;
+    color: #fff;
+}
+.date_address{
+    color: #fff;
+    margin-top: 2%;
+    margin-left: 15%;
+
+}
+.code{
+    transform: rotate(90deg);
+    position: absolute;
+    right: 5%;
+    text-align: center;
+    top: 45%;
+    font-size: 22px;
+    color: #a0a0a0;
+}
+.btnback{
+    background-color: var(--Orange700) !important;
+    color:var(--Neutral900) !important;
+    font-family: "Inconsolata", monospace !important;
+    font-weight: 900 !important;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    width: 50%;
+}
+
+
+/* *************Responsive with media query****************** */
+
+@media screen and (min-width: 300px) and (max-width: 575px){
+    body{
+        font-family: "Inconsolata", monospace;
+        background-image: url('/images/background-tablet.png');
+        min-height: 110vh;
+        background-size:cover;
+        overflow-x: hidden;
+        }
+    .head1 h1 ,.head2 h1{
+        font-size: 2.5rem !important;
+    }
+    header h5{
+        font-size: 1.1rem !important;
+        color:  hsl(245, 15%, 58%);
+    }
+    .ticket{
+        display: none;
+        width: 320px;
+    }
+    .date_address{
+        font-size: 13px;
+        margin-left: 16%;
+    }
+    .code{
+        top: 25%;
+        font-size: 15px;
+    }
+    .profile{
+        position: absolute;
+        bottom: 120px;
+    }
+    .ticket_profile_image{
+        width:40px;
+        height: 65%;
+        border-radius: 5px;
+        background-color: hsla(245, 19%, 35%, 0.5);
+        border: 0.5px solid var(--Orange700);
+    }
+    .ticket_profile{
+        height: 60px;
+    }
+    .nameOnTicket{
+        font-size: 15px;
+        margin-bottom: 0px !important;
+        margin:0 0 0 0 !important;
+    }
+    .github_icon{
+        font-size: 15px;
+    }
+    .usernameOnTicket{
+        font-size: 14px;
+    }
+    .btnback{
+        margin-top: 1%;
+    }
+    .from_div{
+        color: #fff;
+        min-width: 250px;
+    }
+    .from_div input{
+        height: 50px;
+        background-color: hsl(245, 19%, 35%,0.1);
+        backdrop-filter: blur(20px) !important;
+        border: 1px solid var(--Neutral300);
+        color:hsl(252, 6%, 83%);
+    }
+    .from_div input:focus{
+        background-color: var(--Neutral900);
+        color: var(--Neutral300);
+    }
+
+
+
+        .pattern_squiggly_bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: url('/images/pattern-squiggly-line-bottom-mobile-tablet.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+}
+@media screen and (min-width: 575px) {
+    .from_div{
+        color: #fff;
+        min-width: 290px;
+    }
+
+    .ticket_div{
+        min-width: 500px !important;
+
+    }
+
+    .ticket{
+        display: none;
+        width: 500px;
+    }
+    .code{
+        right: 5%;
+        top: 40%;
+        font-size: 22px;
+    }
+
+    .profile{
+        position: absolute;
+        bottom: 50px;
+    }
+}
+@media screen and (min-width: 900px) {
+
+}
