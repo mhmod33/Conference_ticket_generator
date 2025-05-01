@@ -61,7 +61,7 @@ header h5{
     min-height: 100vh;
 }
 .lines_image{
-    background-image: url('/Conference_ticket_generator/pattern-lines.svg');
+    background-image: url('/Conference_ticket_generator/images/pattern-lines.svg');
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
@@ -69,8 +69,7 @@ header h5{
     position: absolute;
 }
 .circle_image{
-    
-    background-image: url('/Conference_ticket_generator/pattern-circle.svg');
+    background-image: url('/Conference_ticket_generator/images/pattern-circle.svg');
     position: absolute;
     z-index: 2;
     width: 250px;
@@ -85,7 +84,7 @@ header h5{
     left: 0;
     width: 50%;
     height: 50%;
-    background-image: url('/Conference_ticket_generator/pattern-squiggly-line-bottom-desktop.svg');
+    background-image: url('/Conference_ticket_generator/images/pattern-squiggly-line-bottom-desktop.svg');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 2;
@@ -282,7 +281,7 @@ form button:hover,.back:hover{
 @media screen and (min-width: 300px) and (max-width: 575px){
     body{
         font-family: "Inconsolata", monospace;
-        background-image: url('/Conference_ticket_generator/background-mobile.png');
+        background-image: url('/Conference_ticket_generator/images/background-mobile.png');
         min-height: 110vh;
         background-mobile
         background-size:cover;
