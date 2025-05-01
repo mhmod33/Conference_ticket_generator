@@ -282,8 +282,9 @@ form button:hover,.back:hover{
 @media screen and (min-width: 300px) and (max-width: 575px){
     body{
         font-family: "Inconsolata", monospace;
-        background-image: url('/images/background-tablet.png');
+        background-image: url('/Conference_ticket_generator/background-mobile.png');
         min-height: 110vh;
+        background-mobile
         background-size:cover;
         overflow-x: hidden;
         }
@@ -350,18 +351,16 @@ form button:hover,.back:hover{
         color: var(--Neutral300);
     }
 
-
-
-        .pattern_squiggly_bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background-image: url('/Conference_ticket_generator/pattern-squiggly-line-bottom-mobile-tablet.svg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: 2;
+    .pattern_squiggly_bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-image: url('/Conference_ticket_generator/pattern-squiggly-line-bottom-mobile-tablet.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 2;
         }
 }
 @media screen and (min-width: 575px) {
